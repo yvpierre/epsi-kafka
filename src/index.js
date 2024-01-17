@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-    res.send('Express + TypeScript Server');
+    res.send('EPSI 2024, Master, Dev2, Pierre Yvenou, Arthur Lory, Simon Huchede, Alexis Bertin');
 });
 
 app.listen(port, () => {
