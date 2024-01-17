@@ -1,3 +1,8 @@
+const {Kafka} = require("kafkajs");
+const kafka = new Kafka({
+    clientId: 'cancelled-flights-producer',
+    brokers: ['kafka1:9092'],
+})
 const consumer = kafka.consumer({ groupId: 'test-group' })
 
 await consumer.connect()
