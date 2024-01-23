@@ -10,9 +10,12 @@ async function main(){
 
     await consumer.run({
         eachMessage: async ({ topic, partition, message }) => {
-            console.log({
-                value: message.value.toString(),
-            })
+            if (message.key.toString() === 'statusCountByAirlineCompany') {
+                console.log({
+                    key: message.key.toString(),
+                    value: message.value.toString(),
+                })
+            }
         },
     })
 }
